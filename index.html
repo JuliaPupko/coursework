@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/swiper.min.css"/>
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Приложение для учета договоров в организации</title>
+</head>
+<body>
+  <header class="header container">
+    <div class="header__content">
+      <picture class="header__logo">
+        <source media="(max-width:1023px)" srcset="img/logo-min.svg">
+        <img src="img/logo-max.svg" alt="logo">
+      </picture>
+      <button class="header__burger btn-reset">
+        <svg width="30" height="20" viewbox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="1" y1="1" x2="29" y2="1" stroke="#4B83F0" stroke-width="2" stroke-linecap="round"/>
+          <line x1="1" y1="10" x2="29" y2="10" stroke="#4B83F0" stroke-width="2" stroke-linecap="round"/>
+          <line x1="1" y1="19" x2="29" y2="19" stroke="#4B83F0" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <nav class="header__nav nav">
+        <button class="nav__close btn-reset">
+          <svg width="20" height="21" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.7456 10.3816L19.9823 16.6183L16.2367 20.3639L10 14.1272L3.74558 20.3816L0 16.636L6.25442 10.3816L0 4.12717L3.74558 0.381592L10 6.63601L16.2544 0.399259L20 4.14484L13.7456 10.     3816Z" fill="#202020"/>
+          </svg>
+        </button>
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="#storage" class="nav__link">Перейти&nbsp;в&nbsp;хранилище</a>
+          </li>
+          <li class="nav__item">
+            <a href="#search" class="nav__link">Найти&nbsp;договор</a>
+          </li>
+          <li class="nav__item">
+            <a href="#questions" class="nav__link">Вопросы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section hero container">
+      <h1 class="hero__title">
+        <span class="hero__anim">Приложение даёт возможность:</span><br>
+        <span class="hero__anim">создавать</span><br>
+        <span class="hero__anim">удалять</span><br>
+        <span class="hero__anim">сортировать</span><br>
+        <span class="hero__anim">хранить</span><br>
+        <span class="hero__anim">различные виды договоров</span>
+      </h1>
+      <img class="hero__comp comp" src="img/monitor 1.png" alt="img">
+      <div class="hero__spots spots">
+        <div class="spots-1"></div>
+        <div class="spots-2"></div>
+      </div>
+    </section>
+
+    <section class="section storage container" id="storage">
+      <div class="storage__content">
+        <h2 class="storage__title titles">Хранилище. Категории договоров</h2>
+        <ul class="storage__tabs-nav tabs-nav list-reset">
+          <li class="tabs-nav__item">
+            <button class="tabs-nav__btn btn-reset" data-path="tab-1">
+              <svg class="tabs-nav__icon" width="15" height="21" viewbox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 19.4608V1.53921L1.53921 1H13.4608L14 1.53921V19.4608L13.4608 20H1.53921L1 19.4608Z" stroke="white" stroke-width="2"/>
+                <path d="M10.872 12L11.4824 12.4281L8.83606 16.245H8.22573L6.75 14.1772L7.36033 13.6078L8.5309 14.7009L10.872 12Z" fill="white"/>
+              </svg>
+              <span>Оказание услуг</span>
+            </button>
+          </li>
+          <li class="tabs-nav__item">
+            <button class="tabs-nav__btn btn-reset" data-path="tab-2">
+              <svg class="tabs-nav__icon" width="15" height="21" viewbox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 19.4608V1.53921L1.53921 1H13.4608L14 1.53921V19.4608L13.4608 20H1.53921L1 19.4608Z" stroke="white" stroke-width="2"/>
+                <path d="M10.872 12L11.4824 12.4281L8.83606 16.245H8.22573L6.75 14.1772L7.36033 13.6078L8.5309 14.7009L10.872 12Z" fill="white"/>
+              </svg>
+              <span>Закупки</span>
+            </button>
+          </li>
+          <li class="tabs-nav__item">
+            <button class="tabs-nav__btn btn-reset" data-path="tab-3">
+              <svg class="tabs-nav__icon" width="15" height="21" viewbox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 19.4608V1.53921L1.53921 1H13.4608L14 1.53921V19.4608L13.4608 20H1.53921L1 19.4608Z" stroke="white" stroke-width="2"/>
+                <path d="M10.872 12L11.4824 12.4281L8.83606 16.245H8.22573L6.75 14.1772L7.36033 13.6078L8.5309 14.7009L10.872 12Z" fill="white"/>
+              </svg>
+              <span>Сотрудники</span>
+            </button>
+          </li>
+          <li class="tabs-nav__item">
+            <button class="tabs-nav__btn btn-reset" data-path="tab-4">
+              <svg class="tabs-nav__icon" width="15" height="21" viewbox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 19.4608V1.53921L1.53921 1H13.4608L14 1.53921V19.4608L13.4608 20H1.53921L1 19.4608Z" stroke="white" stroke-width="2"/>
+                <path d="M10.872 12L11.4824 12.4281L8.83606 16.245H8.22573L6.75 14.1772L7.36033 13.6078L8.5309 14.7009L10.872 12Z" fill="white"/>
+              </svg>
+              <span>Аренда</span>
+            </button>
+          </li>
+          <li class="tabs-nav__item">
+            <button class="tabs-nav__btn btn-reset" data-path="tab-5">
+              <svg class="tabs-nav__icon" width="15" height="21" viewbox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 19.4608V1.53921L1.53921 1H13.4608L14 1.53921V19.4608L13.4608 20H1.53921L1 19.4608Z" stroke="white" stroke-width="2"/>
+                <path d="M10.872 12L11.4824 12.4281L8.83606 16.245H8.22573L6.75 14.1772L7.36033 13.6078L8.5309 14.7009L10.872 12Z" fill="white"/>
+              </svg>
+              <span>Купля-продажа</span>
+            </button>
+          </li>
+          <li class="tabs-nav__item">
+            <button class="tabs-nav__btn btn-reset" data-path="tab-">
+              <svg class="tabs-nav__icon" width="15" height="21" viewbox="0 0 15 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 19.4608V1.53921L1.53921 1H13.4608L14 1.53921V19.4608L13.4608 20H1.53921L1 19.4608Z" stroke="white" stroke-width="2"/>
+                <path d="M10.872 12L11.4824 12.4281L8.83606 16.245H8.22573L6.75 14.1772L7.36033 13.6078L8.5309 14.7009L10.872 12Z" fill="white"/>
+              </svg>
+              <span>Другие</span>
+            </button>
+          </li>
+        </ul>
+        <div class="storage__tabs tabs">
+          <div class="swiper tabs__swiper">
+            <div class="swiper-pagination tabs__pagination"></div>
+            <button class="swiper-button-prev tabs__btn-prev btn-reset"></button>
+            <button class="swiper-button-next tabs__btn-next btn-reset"></button>
+            <div class="swiper-wrapper tabs__wrapper">
+            </div>
+          </div>
+        </div>
+        <button class="btn-reset storage__reset">Сбросить фильтры</button>
+        <button class="storage__btn btn-reset">Добавить договор</button>
+      </div>
+    </section>
+
+    <section class="section search container" id="search">
+      <h2 class="search__title titles">Найти договор</h2>
+      <form action="" class="search__form form">
+        <div class="form__container">
+          <div class="form__left">
+            <fieldset class="form__content">
+              <legend class="form__legend">Статус</legend>
+              <select name="status" id="select-status" class="form__element select form__status">
+                <option value="">Не выбрано</option>
+                <option value="">Действующий</option>
+                <option value="">Ожидает подпись</option>
+                <option value="">Недействующий</option>
+              </select>
+              <svg class="select__svg" width="20" height="8" viewbox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 6.875L10 2L1 6.875" stroke="#E38AD6" stroke-width="2"/>
+              </svg>
+            </fieldset>
+            <fieldset class="form__content">
+              <legend class="form__legend">Вступление в силу</legend>
+              <input type="date" id="input-start-date" class="form__element form__start-date">
+              <p class="form__error-msg">Введите корректную дату</p>
+            </fieldset>
+            <fieldset class="form__content">
+              <legend class="form__legend">Окончание действия</legend>
+              <input type="date" id="input-finish-date" class="form__element form__finish-date">
+              <p class="form__error-msg">Введите корректную дату</p>
+            </fieldset>
+          </div>
+          <div class="form__center">
+            <fieldset class="form__content">
+              <legend class="form__legend">Название договора</legend>
+              <input type="text" id="input-doc-name" class="form__element form__doc-name" placeholder="Название договора">
+            </fieldset>
+            <fieldset class="form__content">
+              <legend class="form__legend">№ договора</legend>
+              <input type="number" id="input-number" class="form__element form__number" min="1" placeholder="Номер договора">
+              <p class="form__error-msg">Введите номер договора</p>
+            </fieldset>
+          </div>
+          <div class="form__right">
+            <fieldset class="form__content form__category">
+              <legend class="form__legend">Категория</legend>
+              <label class="form__label-for-radio" for="input-services">
+                <input class="form__native-checkbox" type="checkbox" name="category" id="input-services" value="Закупки">
+                <span class="form__custom-checkbox"></span>
+                Закупки
+              </label>
+              <label class="form__label-for-radio" for="input-purchases">
+                <input class="form__native-checkbox" type="checkbox" name="category" id="input-purchases" value="Оказание услуг">
+                <span class="form__custom-checkbox"></span>
+                Оказание услуг
+              </label>
+              <label class="form__label-for-radio" for="input-employees">
+                <input class="form__native-checkbox" type="checkbox" name="category" id="input-employees" value="Сотрудники">
+                <span class="form__custom-checkbox"></span>
+                Сотрудники
+              </label>
+              <label class="form__label-for-radio" for="input-rent">
+                <input class="form__native-checkbox" type="checkbox" name="category" id="input-rent" value="Аренда">
+                <span class="form__custom-checkbox"></span>
+                Аренда
+              </label>
+              <label class="form__label-for-radio" for="input-purchase-sale">
+                <input class="form__native-checkbox" type="checkbox" name="category" id="input-purchase-sale" value="Купля-продажа">
+                <span class="form__custom-checkbox"></span>
+                Купля-продажа
+              </label>
+              <label class="form__label-for-radio" for="input-other">
+                <input class="form__native-checkbox" type="checkbox" name="category" id="input-other" value="Другие">
+                <span class="form__custom-checkbox"></span>
+                Другие
+              </label>
+            </fieldset>
+          </div>
+        </div>
+        <button class="form__btn btn-reset done-btn" type="button">Найти</button>
+      </form>
+    </section>
+
+    <section class="section questions container" id="questions">
+      <h2 class="question__title titles">FAQ</h2>
+      <div class="questions__content">
+        <img class="questions__comp comp" src="img/monitor 2.png" alt="img">
+        <div class="questions__spots spots">
+          <div class="spots-1"></div>
+          <div class="spots-2"></div>
+        </div>
+        <ul class="questions__accordion accordion list-reset">
+          <li class="accordion__item">
+            <button class="accordion__trigger btn-reset" data-path="1">
+              <h3 class="accordion__title">Как посмотреть информацию?</h3>
+              <span class="accordion__icon">
+                <svg class="accordion__svg" width="20" height="21" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.7456 10.3816L19.9823 16.6183L16.2367 20.3639L10 14.1272L3.74558 20.3816L0 16.636L6.25442 10.3816L0 4.12717L3.74558 0.381592L10 6.63601L16.2544 0.399259L20 4.14484L13.7456 10.     3816Z" fill="#202020"/>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion__dropdown" data-target="1">
+              <p class="accordion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore illo ad corporis delectus pariatur accusantium tempore unde minus, dicta commodi hic error magnam saepe laboriosam aspernatur quibusdam voluptatem eius maiores?</p>
+            </div>
+          </li>
+          <li class="accordion__item">
+            <button class="accordion__trigger btn-reset" data-path="2">
+              <h3 class="accordion__title">Как создать новый договор?</h3>
+              <span class="accordion__icon">
+                <svg class="accordion__svg" width="20" height="21" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.7456 10.3816L19.9823 16.6183L16.2367 20.3639L10 14.1272L3.74558 20.3816L0 16.636L6.25442 10.3816L0 4.12717L3.74558 0.381592L10 6.63601L16.2544 0.399259L20 4.14484L13.7456 10.     3816Z" fill="#202020"/>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion__dropdown" data-target="2">
+              <p class="accordion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore illo ad corporis delectus pariatur accusantium tempore unde minus, dicta commodi hic error magnam saepe laboriosam aspernatur quibusdam voluptatem eius maiores?</p>
+            </div>
+          </li>
+          <li class="accordion__item">
+            <button class="accordion__trigger btn-reset" data-path="3">
+              <h3 class="accordion__title">Как удалить договор?</h3>
+              <span class="accordion__icon">
+                <svg class="accordion__svg" width="20" height="21" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.7456 10.3816L19.9823 16.6183L16.2367 20.3639L10 14.1272L3.74558 20.3816L0 16.636L6.25442 10.3816L0 4.12717L3.74558 0.381592L10 6.63601L16.2544 0.399259L20 4.14484L13.7456 10.     3816Z" fill="#202020"/>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion__dropdown" data-target="3">
+              <p class="accordion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore illo ad corporis delectus pariatur accusantium tempore unde minus, dicta commodi hic error magnam saepe laboriosam aspernatur quibusdam voluptatem eius maiores?</p>
+            </div>
+          </li>
+          <li class="accordion__item">
+            <button class="accordion__trigger btn-reset" data-path="4">
+              <h3 class="accordion__title">Как найти нужный договор?</h3>
+              <span class="accordion__icon">
+                <svg class="accordion__svg" width="20" height="21" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.7456 10.3816L19.9823 16.6183L16.2367 20.3639L10 14.1272L3.74558 20.3816L0 16.636L6.25442 10.3816L0 4.12717L3.74558 0.381592L10 6.63601L16.2544 0.399259L20 4.14484L13.7456 10.     3816Z" fill="#202020"/>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion__dropdown" data-target="4">
+              <p class="accordion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore illo ad corporis delectus pariatur accusantium tempore unde minus, dicta commodi hic error magnam saepe laboriosam aspernatur quibusdam voluptatem eius maiores?</p>
+            </div>
+          </li>
+          <li class="accordion__item">
+            <button class="accordion__trigger btn-reset" data-path="5">
+              <h3 class="accordion__title">О приложении</h3>
+              <span class="accordion__icon">
+                <svg class="accordion__svg" width="20" height="21" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.7456 10.3816L19.9823 16.6183L16.2367 20.3639L10 14.1272L3.74558 20.3816L0 16.636L6.25442 10.3816L0 4.12717L3.74558 0.381592L10 6.63601L16.2544 0.399259L20 4.14484L13.7456 10.     3816Z" fill="#202020"/>
+                </svg>
+              </span>
+            </button>
+            <div class="accordion__dropdown" data-target="5">
+              <p class="accordion__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore illo ad corporis delectus pariatur accusantium tempore unde minus, dicta commodi hic error magnam saepe laboriosam aspernatur quibusdam voluptatem eius maiores?</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <picture class="footer__logo">
+      <source media="(max-width:1023px)" srcset="img/logo-min.svg">
+      <img src="img/logo-max.svg" alt="logo">
+    </picture>
+    <div class="footer__social">
+      <a href="" class="footer__link">
+        <svg class="footer__tg" width="37" height="32" viewbox="0 0 37 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M33.1674 0.216242C33.6224 0.0247713 34.1203 -0.0412657 34.6094 0.0250037C35.0985 0.0912732 35.5609 0.287427 35.9485 0.593049C36.336 0.89867 36.6346 1.30259 36.8131 1.76276C36.9916 2.22293 37.0435 2.72253 36.9634 3.20956L32.7882 28.5349C32.3832 30.9778 29.7028 32.3787 27.4625 31.1619C25.5884 30.1439 22.805 28.5754 20.3013 26.9388C19.0495 26.1196 15.2149 23.4964 15.6862 21.6297C16.0912 20.0336 22.5343 14.0359 26.2162 10.4701C27.6613 9.06916 27.0022 8.26101 25.2957 9.54964C21.0561 12.7491 14.2539 17.6147 12.0044 18.9843C10.0199 20.1919 8.98526 20.3981 7.74817 20.1919C5.49122 19.8164 3.39811 19.2347 1.68975 18.5259C-0.618751 17.5686 -0.506456 14.3949 1.68791 13.4708L33.1674 0.216242V0.216242Z" fill="#202020"/>
+        </svg>
+      </a>
+      <a href="" class="footer__link">
+        <svg class="footer__vk" width="40" height="24" viewbox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M39.0884 1.61135C39.3631 0.683154 39.0884 0 37.7666 0H33.3929C32.2791 0 31.7667 0.586622 31.492 1.24007C31.492 1.24007 29.2643 6.66818 26.1158 10.1879C25.0985 11.2052 24.6307 11.5319 24.0738 11.5319C23.7991 11.5319 23.3758 11.2052 23.3758 10.277V1.61135C23.3758 0.497514 23.0639 0 22.1431 0H15.267C14.569 0 14.1532 0.519791 14.1532 1.00245C14.1532 2.05689 15.7274 2.30193 15.8908 5.27217V11.7176C15.8908 13.1284 15.6383 13.3883 15.0814 13.3883C13.5963 13.3883 9.98744 7.93796 7.84886 1.70046C7.41818 0.490089 6.99492 0 5.87365 0H1.49997C0.25247 0 0 0.586622 0 1.24007C0 2.39847 1.48512 8.1533 6.91324 15.7571C10.5295 20.9476 15.6235 23.7619 20.257 23.7619C23.0416 23.7619 23.3832 23.1381 23.3832 22.0614C23.3832 17.1011 23.1308 16.6333 24.5268 16.6333C25.1728 16.6333 26.2866 16.9601 28.8856 19.4625C31.8558 22.4327 32.3459 23.7619 34.0093 23.7619H38.3829C39.6304 23.7619 40.2616 23.1381 39.8978 21.9055C39.0661 19.314 33.4449 13.9824 33.1924 13.626C32.5464 12.7943 32.7321 12.423 33.1924 11.6805C33.1999 11.673 38.5389 4.15833 39.0884 1.61135V1.61135Z" fill="#202020"/>
+        </svg>          
+      </a>
+    </div>
+  </footer>
+
+  <div class="adding">
+    <div class="adding__body">
+      <h2 class="adding__title titles">новый договор</h2>
+      <button class="btn-reset adding__btn-close">
+        <svg width="20" height="21" viewbox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.7456 10.3816L19.9823 16.6183L16.2367 20.3639L10 14.1272L3.74558 20.3816L0 16.636L6.25442 10.3816L0 4.12717L3.74558 0.381592L10 6.63601L16.2544 0.399259L20 4.14484L13.7456 10.3816Z" fill="#202020"/>
+        </svg>
+      </button>
+      <form action="" class="adding__form form">
+        <fieldset class="form__content form__category">
+          <legend class="form__legend">Категория *</legend>
+          <label class="form__label-for-radio" for="input-services-adding">
+            <input type="radio" name="adding-category" id="input-services-adding" value="Закупки">
+            <span class="form__custom-radio"></span>
+            Закупки
+          </label>
+          <label class="form__label-for-radio" for="input-purchases-adding">
+            <input type="radio" name="adding-category" id="input-purchases-adding" value="Оказание услуг">
+            <span class="form__custom-radio"></span>
+            Оказание услуг
+          </label>
+          <label class="form__label-for-radio" for="input-employees-adding">
+            <input type="radio" name="adding-category" id="input-employees-adding" value="Сотрудники">
+            <span class="form__custom-radio"></span>
+            Сотрудники
+          </label>
+          <label class="form__label-for-radio" for="input-rent-adding">
+            <input type="radio" name="adding-category" id="input-rent-adding" value="Аренда">
+            <span class="form__custom-radio"></span>
+            Аренда
+          </label>
+          <label class="form__label-for-radio" for="input-purchase-sale-adding">
+            <input type="radio" name="adding-category" id="input-purchase-sale-adding" value="Купля-продажа">
+            <span class="form__custom-radio"></span>
+            Купля-продажа
+          </label>
+          <label class="form__label-for-radio" for="input-other-adding">
+            <input type="radio" name="adding-category" id="input-other-adding" value="Другие">
+            <span class="form__custom-radio"></span>
+            Другие
+          </label>
+        </fieldset>
+        <fieldset class="form__content">
+          <legend class="form__legend">Название договора</legend>
+          <input type="text" id="input-doc-name-adding" class="form__element form__doc-name" placeholder="Название договора">
+          <p class="form__error-msg">Введите название договора</p>
+        </fieldset>
+        <fieldset class="form__content">
+          <legend class="form__legend">№ договора *</legend>
+          <input type="number" id="input-number-adding" class="form__element form__number" min="1" placeholder="Номер договора" required>
+          <p class="form__error-msg">Введите номер договора</p>
+        </fieldset>
+        <fieldset class="form__content">
+          <legend class="form__legend">Вступление в силу *</legend>
+          <input type="date" id="input-start-date-adding" class="form__element form__start-date" required>
+          <p class="form__error-msg">Введите корректную дату</p>
+        </fieldset>
+        <fieldset class="form__content">
+          <legend class="form__legend">Окончание действия *</legend>
+          <input type="date" id="input-finish-date-adding" class="form__element form__finish-date" required>
+          <p class="form__error-msg">Введите корректную дату</p>
+        </fieldset>
+        <button class="btn-reset adding__btn done-btn" type="button">Добавить</button>
+      </form>
+    </div>
+  </div>
+  <script src="js/choices.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
